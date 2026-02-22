@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venocyber - Tournaments</title>
+
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="tournaments.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="menu">
+      <i class="bx bx-arrow-back" onclick="closeBoard()"></i>
+    </div>
+
+    <div class="brand">
+      <h1>Tournaments</h1>
+    </div>
+
+    <div class="icons">
+      <i class="bx bx-bell"></i>
+      <i class="bx bx-dots-horizontal-rounded"></i>
+    </div>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search">
+    <i class="bx bx-search"></i>
+    <input type="text"
+           id="tournamentSearch"
+           placeholder="Search tournaments..."
+           onkeyup="searchTournaments()" />
+  </div>
+
+  <!-- 🔥 INFINITE MOVING ANIMATION -->
+  <div class="game-marquee">
+    <div class="marquee-content">
+      <span>eFootball</span>
+      <span>FC</span>
+      <span>DLS</span>
+      <span>Rally Fury</span>
+      <span>Asphalt</span>
+      <span>Where Winds Meet</span>
+      <span>Call of Duty</span>
+
+      <span>eFootball</span>
+      <span>FC</span>
+      <span>DLS</span>
+      <span>Rally Fury</span>
+      <span>Asphalt</span>
+      <span>Where Winds Meet</span>
+      <span>Call of Duty</span>
+    </div>
+  </div>
+
+  <!-- WHATSAPP STYLE LIST -->
+  <div class="tournament-list">
+
+    <div class="chat-item" onclick="openBoard('efootball')">
+      <img src="https://i.imgur.com/7Q5aH7u.png">
+      <div class="chat-text">
+        <h3>eFootball</h3>
+        <p>Tap to view leaderboard</p>
+      </div>
+    </div>
+
+    <div class="chat-item" onclick="openBoard('dls')">
+      <img src="https://i.imgur.com/7Q5aH7u.png">
+      <div class="chat-text">
+        <h3>DLS</h3>
+        <p>Tap to view leaderboard</p>
+      </div>
+    </div>
+
+    <div class="chat-item" onclick="openBoard('fc')">
+      <img src="https://i.imgur.com/7Q5aH7u.png">
+      <div class="chat-text">
+        <h3>FC Mobile</h3>
+        <p>Tap to view leaderboard</p>
+      </div>
+    </div>
+
+    <div class="chat-item" onclick="openBoard('rally')">
+      <img src="https://i.imgur.com/7Q5aH7u.png">
+      <div class="chat-text">
+        <h3>Rally Fury</h3>
+        <p>Tap to view leaderboard</p>
+      </div>
+    </div>
+
+    <div class="chat-item" onclick="openBoard('asphalt')">
+      <img src="https://i.imgur.com/7Q5aH7u.png">
+      <div class="chat-text">
+        <h3>Asphalt</h3>
+        <p>Tap to view leaderboard</p>
+      </div>
+    </div>
+
+    <div class="chat-item" onclick="openBoard('wwm')">
+      <img src="https://i.imgur.com/7Q5aH7u.png">
+      <div class="chat-text">
+        <h3>Where Winds Meet</h3>
+        <p>Tap to view leaderboard</p>
+      </div>
+    </div>
+
+    <div class="chat-item" onclick="openBoard('cod')">
+      <img src="https://i.imgur.com/7Q5aH7u.png">
+      <div class="chat-text">
+        <h3>Call of Duty</h3>
+        <p>Tap to view leaderboard</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LEADERBOARD SECTION -->
+  <div id="leaderboard" class="leaderboard hidden">
+
+    <h2 id="gameTitle">Leaderboard</h2>
+
+    <div class="section">
+      <h3>Fixtures</h3>
+      <p>No fixtures yet</p>
+    </div>
+
+    <div class="section">
+      <h3>Online Users</h3>
+      <p>12 users online</p>
+    </div>
+
+    <div class="section">
+      <h3>Your Position</h3>
+      <p>Rank: #5</p>
+    </div>
+
+    <button onclick="closeBoard()">Close</button>
+
+  </div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <div class="nav-item" onclick="goHome()">
+    <i class="bx bx-home"></i>
+    <span>Home</span>
+  </div>
+  <div class="nav-item" onclick="goGames()">
+    <i class="bx bx-joystick"></i>
+    <span>Games</span>
+  </div>
+  <div class="nav-item" onclick="goChats()">
+    <i class="bx bx-chat"></i>
+    <span>Chats</span>
+  </div>
+  <div class="nav-item active">
+    <i class="bx bx-trophy"></i>
+    <span>Tournaments</span>
+  </div>
+  <div class="nav-item" onclick="goAccount()">
+    <i class="bx bx-user"></i>
+    <span>Account</span>
+  </div>
+</nav>
+
+<script src="tournaments.js"></script>
+</body>
+</html>
