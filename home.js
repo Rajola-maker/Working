@@ -61,5 +61,41 @@ if(chatBtn){
     window.location.href = "chat.html";
   });
 }
+  document.addEventListener("DOMContentLoaded", () => {
+
+  const homeNav = document.getElementById("homeNav");
+  const gamesNav = document.getElementById("gamesNav");
+  const tournamentsNav = document.getElementById("tournamentsNav");
+  const chatNav = document.getElementById("chatNav");
+
+  // HOME → stays here
+  if(homeNav){
+    homeNav.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  }
+
+  // GAMES
+  if(gamesNav){
+    gamesNav.addEventListener("click", () => {
+      window.location.href = "games.html";
+    });
+  }
+
+  // TOURNAMENTS
+  if(tournamentsNav){
+    tournamentsNav.addEventListener("click", () => {
+      window.location.href = "tournaments.html";
+    });
+  }
+
+  // CHAT
+  if(chatNav){
+    chatNav.addEventListener("click", () => {
+      window.location.href = "chat.html";
+    });
+  }
+
+});
 
 });
