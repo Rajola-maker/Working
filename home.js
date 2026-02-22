@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* BOTTOM NAV ACTIVE */
   const navItems = document.querySelectorAll(".nav-item");
 
   navItems.forEach(item => {
@@ -55,5 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, 3000);
   }
+  const chatBtn = document.getElementById("chatBtn");
+
+if(chatBtn){
+  chatBtn.addEventListener("click", () => {
+    window.location.href = "chat.html";
+  });
+}
 
 });
