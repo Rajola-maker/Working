@@ -95,7 +95,52 @@ if(chatBtn){
       window.location.href = "chat.html";
     });
   }
+// SLIDER
+let currentIndex = 0;
+const slides = document.getElementById("slides");
 
+setInterval(() => {
+  const total = slides.children.length;
+
+  if(total > 0){
+    currentIndex++;
+    if(currentIndex >= total){
+      currentIndex = 0;
+    }
+
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+}, 3000);
+
+// BUTTON ACTIONS (open pages)
+function openUpdates(){
+  window.location.href = "./updates.html";
+}
+
+function openStore(){
+  window.location.href = "./store.html";
+}
+
+function openMoney(){
+  window.location.href = "./money.html";
+}
+
+function goTournaments(){
+  window.location.href = "./tournaments.html";
+}
+
+// NAVIGATION
+document.getElementById("homeNav").onclick = function(){
+  window.location.href = "./home.html";
+};
+
+document.getElementById("gamesNav").onclick = function(){
+  window.location.href = "./games.html";
+};
+
+document.getElementById("chatNav").onclick = function(){
+  window.location.href = "./chats.html";
+};
 });
 
 });
