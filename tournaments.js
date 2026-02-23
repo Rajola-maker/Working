@@ -1,40 +1,67 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
 
   function go(page){
     window.location.href = page;
   }
 
   // NAVIGATION
-  document.getElementById("homeNav").onclick = () => go("index.html");
-  document.getElementById("gamesNav").onclick = () => go("games.html");
-  document.getElementById("tournamentsNav").onclick = () => go("tournaments.html");
-  document.getElementById("accountNav").onclick = () => go("account.html");
+  const home = document.getElementById("homeNav");
+  const games = document.getElementById("gamesNav");
+  const tournaments = document.getElementById("tournamentsNav");
+  const chat = document.getElementById("chatNav");
+  const account = document.getElementById("accountNav");
 
-  document.getElementById("chatNav").onclick = () => {
-    alert("Chat page not ready yet 🚧");
-  };
+  if(home) home.onclick = () => go("index.html");
+  if(games) games.onclick = () => go("games.html");
+  if(tournaments) tournaments.onclick = () => go("tournaments.html");
+  if(account) account.onclick = () => go("account.html");
 
-  // BACK ARROW
-  document.getElementById("backBtn").onclick = () => go("index.html");
+  if(chat){
+    chat.onclick = () => {
+      alert("Chat page not ready yet 🚧");
+    };
+  }
+
+  // BACK
+  const back = document.getElementById("backBtn");
+  if(back) back.onclick = () => go("index.html");
 
   // NOTIFICATION
-  document.getElementById("notificationBtn").onclick = () => {
-    alert("🔔 No new notifications.");
-  };
+  const bell = document.getElementById("notificationBtn");
+  if(bell){
+    bell.onclick = () => {
+      alert("🔔 No new notifications.");
+    };
+  }
 
-  // THREE DOTS
-  document.getElementById("dotsBtn").onclick = () => {
-    alert("⚙️ More options coming soon.");
-  };
+  // DOTS
+  const dots = document.getElementById("dotsBtn");
+  if(dots){
+    dots.onclick = () => {
+      alert("⚙️ Options coming soon.");
+    };
+  }
 
-  // OPEN GAME PAGES
-  const items = document.querySelectorAll(".chat-item");
-
-  items.forEach(item => {
-    item.addEventListener("click", () => {
+  // GAME ITEMS
+  document.querySelectorAll(".chat-item").forEach(item => {
+    item.onclick = () => {
       const page = item.getAttribute("data-page");
-      go(page);
-    });
+      if(page) go(page);
+    };
   });
+
+  // SEARCH
+  const search = document.getElementById("tournamentSearch");
+
+  if(search){
+    search.addEventListener("keyup", () => {
+      const value = search.value.toLowerCase();
+
+      document.querySelectorAll(".chat-item").forEach(item => {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(value) ? "flex" : "none";
+      });
+    });
+  }
 
 });
