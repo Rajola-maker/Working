@@ -1,103 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ================= NAVIGATION ================= */
+  // ===== NAVIGATION =====
+  const pages = {
+    homeNav: "index.html",
+    gamesNav: "games.html",
+    tournamentsNav: "tournaments.html",
+    chatNav: "chat.html",
+    accountNav: "account.html"
+  };
 
-  const homeNav = document.getElementById("homeNav");
-  const gamesNav = document.getElementById("gamesNav");
-  const chatNav = document.getElementById("chatNav");
-  const tournamentsNav = document.getElementById("tournamentsNav");
-  const accountNav = document.getElementById("accountNav");
+  Object.keys(pages).forEach(id => {
+    const element = document.getElementById(id);
+    if(element){
+      element.addEventListener("click", () => {
+        window.location.href = pages[id];
+      });
+    }
+  });
 
-  if(homeNav){
-    homeNav.addEventListener("click", () => {
-      window.location.href = "./home.html";
+  // ===== MENU BUTTON (Three Lines) =====
+  const menuBtn = document.getElementById("menuBtn");
+  if(menuBtn){
+    menuBtn.addEventListener("click", () => {
+      alert("Sidebar menu will open here 🔥");
     });
   }
 
-  if(gamesNav){
-    gamesNav.addEventListener("click", () => {
-      window.location.href = "./games.html";
+  // ===== NOTIFICATION =====
+  const notificationBtn = document.getElementById("notificationBtn");
+  if(notificationBtn){
+    notificationBtn.addEventListener("click", () => {
+      alert("No new notifications 🔔");
     });
   }
 
-  if(chatNav){
-    chatNav.addEventListener("click", () => {
-      window.location.href = "./chat.html";
+  // ===== THREE DOTS =====
+  const dotsBtn = document.getElementById("dotsBtn");
+  if(dotsBtn){
+    dotsBtn.addEventListener("click", () => {
+      alert("More options menu ⚙️");
     });
   }
 
-  if(tournamentsNav){
-    tournamentsNav.addEventListener("click", () => {
-      window.location.href = "./tournaments.html";
-    });
-  }
-
-  if(accountNav){
-    accountNav.addEventListener("click", () => {
-      window.location.href = "./account.html";
-    });
-  }
-
-  /* ================= SLIDER ================= */
-
-  const slides = document.getElementById("slides");
+  // ===== IMAGE SLIDER =====
   let currentIndex = 0;
+  const slides = document.getElementById("slides");
 
   if(slides){
     setInterval(() => {
       const total = slides.children.length;
-
-      if(total > 0){
-        currentIndex++;
-        if(currentIndex >= total){
-          currentIndex = 0;
-        }
-
-        slides.style.transform =
-          `translateX(-${currentIndex * 100}%)`;
-      }
+      currentIndex = (currentIndex + 1) % total;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
     }, 3000);
   }
 
-  /* ================= MENU ================= */
-
-  const menu = document.querySelector(".menu");
-  if(menu){
-    menu.addEventListener("click", () => {
-      alert("Menu clicked!");
-    });
-  }
-
-  const notification = document.querySelector(".bx-bell");
-  if(notification){
-    notification.addEventListener("click", () => {
-      alert("Notifications opened.");
-    });
-  }
-
-  const dots = document.querySelector(".bx-dots-horizontal-rounded");
-  if(dots){
-    dots.addEventListener("click", () => {
-      alert("More options.");
-    });
-  }
-
 });
-
-/* ================= BUTTON PAGES ================= */
-
-function openUpdates(){
-  window.location.href = "./updates.html";
-}
-
-function openStore(){
-  window.location.href = "./store.html";
-}
-
-function openMoney(){
-  window.location.href = "./money.html";
-}
-
-function goTournaments(){
-  window.location.href = "./tournaments.html";
-}
