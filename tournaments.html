@@ -15,8 +15,8 @@
 
   <!-- TOP BAR -->
   <header class="topbar">
-    <div class="menu">
-      <i class="bx bx-arrow-back" onclick="closeBoard()"></i>
+    <div class="menu" id="backBtn">
+      <i class="bx bx-arrow-back"></i>
     </div>
 
     <div class="brand">
@@ -34,11 +34,10 @@
     <i class="bx bx-search"></i>
     <input type="text"
            id="tournamentSearch"
-           placeholder="Search tournaments..."
-           onkeyup="searchTournaments()" />
+           placeholder="Search tournaments..." />
   </div>
 
-  <!-- 🔥 INFINITE MOVING ANIMATION -->
+  <!-- MARQUEE -->
   <div class="game-marquee">
     <div class="marquee-content">
       <span>eFootball</span>
@@ -56,135 +55,102 @@
       <span>Asphalt</span>
       <span>Where Winds Meet</span>
       <span>Call of Duty</span>
-      <span>eFootball</span>
-      <span>FC</span>
-      <span>DLS</span>
-      <span>Rally Fury</span>
-      <span>Asphalt</span>
-      <span>Where Winds Meet</span>
-      <span>Call of Duty</span>
-
-      <span>eFootball</span>
-      <span>FC</span>
-      <span>DLS</span>
-      <span>Rally Fury</span>
-      <span>Asphalt</span>
-      <span>Where Winds Meet</span>
-      <span>Call of Duty</span>
     </div>
   </div>
 
-  <!-- WHATSAPP STYLE LIST -->
-  <div class="tournament-list">
+  <!-- TOURNAMENT LIST -->
+  <div class="tournament-list" id="tournamentList">
 
-    <div class="chat-item" onclick="openBoard('efootball')">
+    <div class="chat-item" data-page="efootball.html">
       <img src="https://i.imgur.com/7Q5aH7u.png">
       <div class="chat-text">
         <h3>eFootball</h3>
-        <p>Tap to view leaderboard</p>
+        <p>Tap to open tournament page</p>
       </div>
     </div>
 
-    <div class="chat-item" onclick="openBoard('dls')">
+    <div class="chat-item" data-page="dls.html">
       <img src="https://i.imgur.com/7Q5aH7u.png">
       <div class="chat-text">
         <h3>DLS</h3>
-        <p>Tap to view leaderboard</p>
+        <p>Tap to open tournament page</p>
       </div>
     </div>
 
-    <div class="chat-item" onclick="openBoard('fc')">
+    <div class="chat-item" data-page="fc.html">
       <img src="https://i.imgur.com/7Q5aH7u.png">
       <div class="chat-text">
         <h3>FC Mobile</h3>
-        <p>Tap to view leaderboard</p>
+        <p>Tap to open tournament page</p>
       </div>
     </div>
 
-    <div class="chat-item" onclick="openBoard('rally')">
+    <div class="chat-item" data-page="rally.html">
       <img src="https://i.imgur.com/7Q5aH7u.png">
       <div class="chat-text">
         <h3>Rally Fury</h3>
-        <p>Tap to view leaderboard</p>
+        <p>Tap to open tournament page</p>
       </div>
     </div>
 
-    <div class="chat-item" onclick="openBoard('asphalt')">
+    <div class="chat-item" data-page="asphalt.html">
       <img src="https://i.imgur.com/7Q5aH7u.png">
       <div class="chat-text">
         <h3>Asphalt</h3>
-        <p>Tap to view leaderboard</p>
+        <p>Tap to open tournament page</p>
       </div>
     </div>
 
-    <div class="chat-item" onclick="openBoard('wwm')">
+    <div class="chat-item" data-page="wwm.html">
       <img src="https://i.imgur.com/7Q5aH7u.png">
       <div class="chat-text">
         <h3>Where Winds Meet</h3>
-        <p>Tap to view leaderboard</p>
+        <p>Tap to open tournament page</p>
       </div>
     </div>
 
-    <div class="chat-item" onclick="openBoard('cod')">
+    <div class="chat-item" data-page="cod.html">
       <img src="https://i.imgur.com/7Q5aH7u.png">
       <div class="chat-text">
         <h3>Call of Duty</h3>
-        <p>Tap to view leaderboard</p>
+        <p>Tap to open tournament page</p>
       </div>
     </div>
-
-  </div>
-
-  <!-- LEADERBOARD SECTION -->
-  <div id="leaderboard" class="leaderboard hidden">
-
-    <h2 id="gameTitle">Leaderboard</h2>
-
-    <div class="section">
-      <h3>Fixtures</h3>
-      <p>No fixtures yet</p>
-    </div>
-
-    <div class="section">
-      <h3>Online Users</h3>
-      <p>12 users online</p>
-    </div>
-
-    <div class="section">
-      <h3>Your Position</h3>
-      <p>Rank: #5</p>
-    </div>
-
-    <button onclick="closeBoard()">Close</button>
 
   </div>
 
 </div>
 
-<!-- 🔥 BOTTOM NAVIGATION -->
-<div class="bottom-nav">
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
 
-  <div class="nav-item" onclick="window.location.href='./home.html'">
+  <div class="nav-item" id="homeNav">
     <i class="bx bx-home"></i>
     <span>Home</span>
   </div>
 
-  <div class="nav-item" onclick="window.location.href='./games.html'">
+  <div class="nav-item" id="gamesNav">
     <i class="bx bx-joystick"></i>
     <span>Games</span>
   </div>
 
-  <div class="nav-item" onclick="window.location.href='./chat.html'">
-    <i class="bx bx-chat"></i>
-    <span>Chat</span>
-  </div>
-
-  <div class="nav-item active">
+  <div class="nav-item active" id="tournamentsNav">
     <i class="bx bx-trophy"></i>
     <span>Tournaments</span>
   </div>
 
-</div>
+  <div class="nav-item" id="chatNav">
+    <i class="bx bx-chat"></i>
+    <span>Chat</span>
+  </div>
+
+  <div class="nav-item" id="accountNav">
+    <i class="bx bx-user"></i>
+    <span>Account</span>
+  </div>
+
+</nav>
+
 <script src="tournaments.js"></script>
 </body>
 </html>
