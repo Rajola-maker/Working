@@ -11,20 +11,23 @@
 
 <div class="app">
 
+  <!-- TOPBAR -->
   <header class="topbar">
-    <div class="menu"><i class="bx bx-menu"></i></div>
+    <div class="menu" id="menuBtn"><i class="bx bx-menu"></i></div>
     <div class="brand"><h1>Venocyber</h1></div>
     <div class="icons">
-      <i class="bx bx-bell"></i>
-      <i class="bx bx-dots-horizontal-rounded"></i>
+      <i class="bx bx-bell" id="notificationBtn"></i>
+      <i class="bx bx-dots-horizontal-rounded" id="dotsBtn"></i>
     </div>
   </header>
 
+  <!-- SEARCH -->
   <div class="search">
     <i class="bx bx-search"></i>
     <input type="text" placeholder="Search for Games, Competition..." />
   </div>
 
+  <!-- PROMO -->
   <div class="promo">
     <div class="promo-icon">
       <i class="bx bxs-gift"></i>
@@ -48,48 +51,14 @@
         <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
         <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
         <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
       </div>
     </div>
   </div>
 
-  <!-- BUTTONS -->
-  <div class="buttons">
-    <div class="btn orange"><i class="bx bx-refresh"></i><span>Updates</span></div>
-    <div class="btn purple"><i class="bx bx-vote"></i><span>Buy Games</span></div>
-    <div class="btn green"><i class="bx bx-money"></i><span>Money</span></div>
-    <div class="btn yellow" onclick="window.location.href='./tournaments.html'">
-  <i class="bx bx-trophy"></i>
-  <span>Tournaments</span>
-    </div>
-  </div>
+</div>
 
-  <div class="bottom-nav">
-
-  <div class="nav-item active">
-    <i class="bx bx-home"></i>
-    <span>Home</span>
-  </div>
-
-  <div class="nav-item" onclick="window.location.href='./games.html'">
-    <i class="bx bx-joystick"></i>
-    <span>Games</span>
-  </div>
-
-  <div class="nav-item" onclick="window.location.href='./tournaments.html'">
-    <i class="bx bx-trophy"></i>
-    <span>Tournaments</span>
-  </div>
-
-  <div class="nav-item" onclick="window.location.href='./chat.html'">
-    <i class="bx bx-chat"></i>
-    <span>Chat</span>
-  </div>
-
-  </div>
-<script src="home.js"></script>
-  <nav class="bottom-nav">
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
 
   <div class="nav-item active" id="homeNav">
     <i class="bx bx-home"></i>
@@ -97,8 +66,13 @@
   </div>
 
   <div class="nav-item" id="gamesNav">
-    <i class="bx bx-game"></i>
+    <i class="bx bx-joystick"></i>
     <span>Games</span>
+  </div>
+
+  <div class="nav-item" id="tournamentsNav">
+    <i class="bx bx-trophy"></i>
+    <span>Tournaments</span>
   </div>
 
   <div class="nav-item" id="chatNav">
@@ -106,16 +80,13 @@
     <span>Chat</span>
   </div>
 
-  <div class="nav-item" onclick="window.location.href='./tournaments.html'">
-    <i class="bx bx-trophy"></i>
-    <span>Tournaments</span>
-  </div>
-
-  <div class="nav-item" onclick="window.location.href='./account.html'">
+  <div class="nav-item" id="accountNav">
     <i class="bx bx-user"></i>
     <span>Account</span>
   </div>
 
-  </nav>
+</nav>
+
+<script src="home.js"></script>
 </body>
 </html>
