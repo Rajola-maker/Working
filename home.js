@@ -1,3 +1,14 @@
+document.getElementById("homeNav").onclick = function(){
+  window.location.href = "./home.html";
+};
+
+document.getElementById("gamesNav").onclick = function(){
+  window.location.href = "./games.html";
+};
+
+document.getElementById("chatNav").onclick = function(){
+  window.location.href = "./chat.html";
+};
 document.addEventListener("DOMContentLoaded", () => {
 
   const navItems = document.querySelectorAll(".nav-item");
