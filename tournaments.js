@@ -1,115 +1,40 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
 
-  /* =========================
-     🔥 NAVIGATION SYSTEM
-  ========================== */
-
-  const homeNav = document.getElementById("homeNav");
-  const gamesNav = document.getElementById("gamesNav");
-  const tournamentsNav = document.getElementById("tournamentsNav");
-  const chatNav = document.getElementById("chatNav");
-  const accountNav = document.getElementById("accountNav");
-
-  if(homeNav){
-    homeNav.addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
+  function go(page){
+    window.location.href = page;
   }
 
-  if(gamesNav){
-    gamesNav.addEventListener("click", () => {
-      window.location.href = "games.html";
-    });
-  }
+  // NAVIGATION
+  document.getElementById("homeNav").onclick = () => go("index.html");
+  document.getElementById("gamesNav").onclick = () => go("games.html");
+  document.getElementById("tournamentsNav").onclick = () => go("tournaments.html");
+  document.getElementById("accountNav").onclick = () => go("account.html");
 
-  if(tournamentsNav){
-    tournamentsNav.addEventListener("click", () => {
-      window.location.href = "tournaments.html";
-    });
-  }
+  document.getElementById("chatNav").onclick = () => {
+    alert("Chat page not ready yet 🚧");
+  };
 
-  if(accountNav){
-    accountNav.addEventListener("click", () => {
-      window.location.href = "account.html";
-    });
-  }
+  // BACK ARROW
+  document.getElementById("backBtn").onclick = () => go("index.html");
 
-  /* 🚫 CHAT NOT READY YET */
-  if(chatNav){
-    chatNav.addEventListener("click", () => {
-      alert("Chat page not ready yet 🚧");
-    });
-  }
+  // NOTIFICATION
+  document.getElementById("notificationBtn").onclick = () => {
+    alert("🔔 No new notifications.");
+  };
 
+  // THREE DOTS
+  document.getElementById("dotsBtn").onclick = () => {
+    alert("⚙️ More options coming soon.");
+  };
 
-  /* =========================
-     🔥 BACK ARROW
-  ========================== */
-
-  const backBtn = document.getElementById("backBtn");
-
-  if(backBtn){
-    backBtn.addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
-  }
-
-
-  /* =========================
-     🔔 NOTIFICATION
-  ========================== */
-
-  const notificationIcon = document.querySelector(".bx-bell");
-
-  if(notificationIcon){
-    notificationIcon.addEventListener("click", () => {
-      alert("🔔 You have no new notifications.");
-    });
-  }
-
-
-  /* =========================
-     ⋮ THREE DOTS MENU
-  ========================== */
-
-  const dotsIcon = document.querySelector(".bx-dots-horizontal-rounded");
-
-  if(dotsIcon){
-    dotsIcon.addEventListener("click", () => {
-      alert("⚙️ More options coming soon.");
-    });
-  }
-
-
-  /* =========================
-     🎮 OPEN GAME PAGES
-  ========================== */
-
+  // OPEN GAME PAGES
   const items = document.querySelectorAll(".chat-item");
 
   items.forEach(item => {
     item.addEventListener("click", () => {
       const page = item.getAttribute("data-page");
-      window.location.href = page;
+      go(page);
     });
   });
-
-
-  /* =========================
-     🔍 SEARCH
-  ========================== */
-
-  const searchInput = document.getElementById("tournamentSearch");
-
-  if(searchInput){
-    searchInput.addEventListener("keyup", () => {
-      const value = searchInput.value.toLowerCase();
-
-      items.forEach(item => {
-        const text = item.innerText.toLowerCase();
-        item.style.display = text.includes(value) ? "flex" : "none";
-      });
-    });
-  }
 
 });
