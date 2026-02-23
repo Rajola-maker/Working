@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venocyber - Games</title>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="games.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="menu">
+      <i class="bx bx-arrow-back" onclick="goHome()"></i>
+    </div>
+
+    <div class="brand">
+      <h1>Games</h1>
+    </div>
+
+    <div class="icons">
+      <i class="bx bx-bell" onclick="openNotifications()"></i>
+      <i class="bx bx-dots-horizontal-rounded" onclick="openMenu()"></i>
+    </div>
+  </header>
+
+  <!-- NAVIGATION TABS -->
+  <div class="tabs">
+    <div class="tab active" id="pcTab" onclick="switchTab('pc')">PC Games</div>
+    <div class="tab" id="pspTab" onclick="switchTab('psp')">PSP Games</div>
+    <div class="tab" id="hackedTab" onclick="switchTab('hacked')">Hacked</div>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <div class="search">
+    <i class="bx bx-search"></i>
+    <input type="text" id="gameSearch" placeholder="Search games..." onkeyup="searchGames()" />
+  </div>
+
+  <!-- GAME LIST -->
+  <div class="game-list" id="gameList"></div>
+
+  <!-- UPLOAD BUTTON -->
+  <div class="upload-box">
+    <h3>Upload Your Game</h3>
+    <p>Upload games for users to download (demo)</p>
+    <button class="upload-btn" onclick="uploadGame()">Upload Game</button>
+  </div>
+
+</div>
+
+<!-- NOTIFICATION POPUP -->
+<div id="notificationPanel" class="popup hidden">
+  <h3>Notifications</h3>
+  <p>No new notifications 🔔</p>
+  <button onclick="closeNotifications()">Close</button>
+</div>
+
+<!-- MENU POPUP -->
+<div id="menuPanel" class="popup hidden">
+  <h3>Menu</h3>
+  <p onclick="alert('Settings coming soon')">Settings</p>
+  <p onclick="alert('Help coming soon')">Help</p>
+  <button onclick="closeMenu()">Close</button>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <div class="nav-item" onclick="goHome()">
+    <i class="bx bx-home"></i>
+    <span>Home</span>
+  </div>
+  <div class="nav-item active">
+    <i class="bx bx-game"></i>
+    <span>Games</span>
+  </div>
+  <div class="nav-item" onclick="goChats()">
+    <i class="bx bx-chat"></i>
+    <span>Chats</span>
+  </div>
+  <div class="nav-item" onclick="goTournaments()">
+    <i class="bx bx-trophy"></i>
+    <span>Tournaments</span>
+  </div>
+  <div class="nav-item" onclick="goAccount()">
+    <i class="bx bx-user"></i>
+    <span>Account</span>
+  </div>
+</nav>
+
+<script src="games.js"></script>
+</body>
+</html>
