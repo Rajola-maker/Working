@@ -5,13 +5,11 @@ body{
   color:white;
 }
 
-/* APP */
 .app{
   padding:15px;
   padding-bottom:100px;
 }
 
-/* TOP BAR */
 .topbar{
   display:flex;
   justify-content:space-between;
@@ -23,15 +21,8 @@ body{
 .topbar .icons i{
   font-size:24px;
   cursor:pointer;
-  transition:0.3s;
 }
 
-.topbar .menu:hover,
-.topbar .icons i:hover{
-  color:#3ea1ff;
-}
-
-/* SEARCH */
 .search{
   background:#0b1433;
   padding:10px 15px;
@@ -47,37 +38,8 @@ body{
   border:none;
   outline:none;
   color:white;
-  font-size:14px;
 }
 
-/* MARQUEE */
-.game-marquee{
-  overflow:hidden;
-  white-space:nowrap;
-  background:#0b1433;
-  padding:10px 0;
-  margin-bottom:15px;
-  border-radius:12px;
-}
-
-.marquee-content{
-  display:flex;
-  gap:40px;
-  animation: moveLeft 15s linear infinite;
-}
-
-.marquee-content span{
-  font-weight:600;
-  font-size:14px;
-  color:#3ea1ff;
-}
-
-@keyframes moveLeft{
-  from{ transform: translateX(100%); }
-  to{ transform: translateX(-100%); }
-}
-
-/* GAME LIST */
 .chat-item{
   display:flex;
   align-items:center;
@@ -85,79 +47,17 @@ body{
   padding:12px;
   border-bottom:1px solid rgba(255,255,255,0.05);
   cursor:pointer;
-  transition:0.3s;
 }
 
 .chat-item img{
   width:50px;
   height:50px;
   border-radius:50%;
-  object-fit:cover;
-}
-
-.chat-text h3{
-  margin:0;
-  font-size:16px;
-}
-
-.chat-text p{
-  margin:3px 0 0 0;
-  font-size:12px;
-  opacity:0.6;
 }
 
 .chat-item:hover{
-  background:rgba(62,161,255,0.08);
-  transform:translateX(5px);
+  background:rgba(255,255,255,0.05);
 }
-
-/* LEADERBOARD */
-.leaderboard{
-  background:#0b1433;
-  padding:15px;
-  border-radius:15px;
-  margin-top:10px;
-}
-
-.hidden{
-  display:none;
-}
-
-.section{
-  background:rgba(255,255,255,0.06);
-  padding:12px;
-  border-radius:12px;
-  margin-bottom:10px;
-}
-
-.section h3{
-  margin:0;
-  font-size:15px;
-}
-
-.section p{
-  margin:5px 0 0 0;
-  font-size:13px;
-  opacity:0.8;
-}
-
-.leaderboard button{
-  background:#3ea1ff;
-  border:none;
-  padding:8px 15px;
-  border-radius:10px;
-  color:white;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.leaderboard button:hover{
-  background:#2b8ce6;
-}
-
-/* ============================= */
-/* 🔥 BOTTOM NAV LIKE HOME */
-/* ============================= */
 
 .bottom-nav{
   position:fixed;
@@ -168,7 +68,6 @@ body{
   display:flex;
   justify-content:space-around;
   padding:10px 0;
-  border-top:1px solid rgba(255,255,255,0.05);
 }
 
 .nav-item{
@@ -178,24 +77,12 @@ body{
   font-size:12px;
   color:rgba(255,255,255,0.6);
   cursor:pointer;
-  transition:0.3s;
 }
 
 .nav-item i{
   font-size:22px;
-  margin-bottom:3px;
 }
 
-/* ACTIVE EFFECT */
 .nav-item.active{
-  color:#3ea1ff;
-}
-
-.nav-item.active i{
-  text-shadow:0 0 10px #3ea1ff;
-}
-
-/* HOVER EFFECT */
-.nav-item:hover{
   color:#3ea1ff;
 }
