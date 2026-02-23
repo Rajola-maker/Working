@@ -5,6 +5,7 @@ body{
   color:white;
 }
 
+/* APP */
 .app{
   padding:15px;
   padding-bottom:100px;
@@ -22,6 +23,12 @@ body{
 .topbar .icons i{
   font-size:24px;
   cursor:pointer;
+  transition:0.3s;
+}
+
+.topbar .menu:hover,
+.topbar .icons i:hover{
+  color:#3ea1ff;
 }
 
 /* SEARCH */
@@ -40,9 +47,10 @@ body{
   border:none;
   outline:none;
   color:white;
+  font-size:14px;
 }
 
-/* INFINITE ANIMATION */
+/* MARQUEE */
 .game-marquee{
   overflow:hidden;
   white-space:nowrap;
@@ -55,7 +63,7 @@ body{
 .marquee-content{
   display:flex;
   gap:40px;
-  animation: moveLeft 12s linear infinite;
+  animation: moveLeft 15s linear infinite;
 }
 
 .marquee-content span{
@@ -69,7 +77,7 @@ body{
   to{ transform: translateX(-100%); }
 }
 
-/* WHATSAPP STYLE LIST */
+/* GAME LIST */
 .chat-item{
   display:flex;
   align-items:center;
@@ -77,6 +85,7 @@ body{
   padding:12px;
   border-bottom:1px solid rgba(255,255,255,0.05);
   cursor:pointer;
+  transition:0.3s;
 }
 
 .chat-item img{
@@ -98,12 +107,13 @@ body{
 }
 
 .chat-item:hover{
-  background:rgba(255,255,255,0.05);
+  background:rgba(62,161,255,0.08);
+  transform:translateX(5px);
 }
 
 /* LEADERBOARD */
 .leaderboard{
-  background:#070A14;
+  background:#0b1433;
   padding:15px;
   border-radius:15px;
   margin-top:10px;
@@ -138,9 +148,17 @@ body{
   border-radius:10px;
   color:white;
   cursor:pointer;
+  transition:0.3s;
 }
 
-/* BOTTOM NAV */
+.leaderboard button:hover{
+  background:#2b8ce6;
+}
+
+/* ============================= */
+/* 🔥 BOTTOM NAV LIKE HOME */
+/* ============================= */
+
 .bottom-nav{
   position:fixed;
   bottom:0;
@@ -150,6 +168,7 @@ body{
   display:flex;
   justify-content:space-around;
   padding:10px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
 }
 
 .nav-item{
@@ -157,14 +176,26 @@ body{
   flex-direction:column;
   align-items:center;
   font-size:12px;
-  color:rgba(255,255,255,0.7);
+  color:rgba(255,255,255,0.6);
   cursor:pointer;
+  transition:0.3s;
 }
 
 .nav-item i{
   font-size:22px;
+  margin-bottom:3px;
 }
 
+/* ACTIVE EFFECT */
 .nav-item.active{
+  color:#3ea1ff;
+}
+
+.nav-item.active i{
+  text-shadow:0 0 10px #3ea1ff;
+}
+
+/* HOVER EFFECT */
+.nav-item:hover{
   color:#3ea1ff;
 }
