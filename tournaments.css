@@ -17,8 +17,7 @@ body{
   margin-bottom:15px;
 }
 
-.topbar .menu,
-.topbar .icons i{
+.topbar i{
   font-size:24px;
   cursor:pointer;
 }
