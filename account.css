@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:#0a0f1f;
+  color:white;
+}
+
+.app{
+  padding:20px;
+  padding-bottom:120px;
+}
+
+/* TOP BAR */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.topbar i{
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* PROFILE CARD */
+.profile-card{
+  background: rgba(255,255,255,0.06);
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+}
+
+.profile-card img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+}
+
+.profile-card h2{
+  margin-top:10px;
+}
+
+.profile-card p{
+  font-size:14px;
+  opacity:0.8;
+}
+
+/* EDIT BOX */
+.edit-box{
+  background: rgba(255,255,255,0.06);
+  padding:20px;
+  border-radius:18px;
+  margin-top:15px;
+}
+
+.edit-box h2{
+  margin-bottom:15px;
+}
+
+.edit-box input,
+.edit-box select{
+  width:100%;
+  padding:12px;
+  margin-bottom:10px;
+  border:none;
+  border-radius:12px;
+  background: rgba(255,255,255,0.08);
+  color:white;
+  outline:none;
+}
+
+.phone-box{
+  display:flex;
+  gap:10px;
+}
+
+#countryCode{
+  width:35%;
+}
+
+#phoneInput{
+  width:65%;
+}
+
+.save-btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:#00b894;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* NAV (like home) */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#060a18;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+
+.nav-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:12px;
+  color:rgba(255,255,255,0.7);
+}
+
+.nav-item i{
+  font-size:22px;
+}
+
+.nav-item.active{
+  color:#3ea1ff;
+}
+
+.nav-item.big{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#0b1433;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:-25px;
+}
