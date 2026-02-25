@@ -67,28 +67,34 @@
   <button onclick="closeMenu()">Close</button>
 </div>
 
-<!-- BOTTOM NAV -->
+  <!-- BOTTOM NAV -->
 <nav class="bottom-nav">
-  <div class="nav-item" onclick="goHome()">
+
+  <div class="nav-item active" id="homeNav">
     <i class="bx bx-home"></i>
     <span>Home</span>
   </div>
-  <div class="nav-item active">
-    <i class="bx bx-game"></i>
+
+  <div class="nav-item" id="gamesNav">
+    <i class="bx bx-joystick"></i>
     <span>Games</span>
   </div>
-  <div class="nav-item" onclick="goChats()">
-    <i class="bx bx-chat"></i>
-    <span>Chats</span>
-  </div>
-  <div class="nav-item" onclick="goTournaments()">
+
+  <div class="nav-item" id="tournamentsNav">
     <i class="bx bx-trophy"></i>
     <span>Tournaments</span>
   </div>
-  <div class="nav-item" onclick="goAccount()">
+
+  <div class="nav-item" id="chatNav">
+    <i class="bx bx-chat"></i>
+    <span>Chat</span>
+  </div>
+
+  <div class="nav-item" id="accountNav">
     <i class="bx bx-user"></i>
     <span>Account</span>
   </div>
+
 </nav>
 
 <script src="games.js"></script>
