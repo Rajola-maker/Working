@@ -51,6 +51,44 @@ body{
   font-size:14px;
   opacity:0.8;
 }
+.profile-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+.profile-pic-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffcc;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #00ffcc;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.edit-icon i {
+    font-size: 16px;
+    color: black;
+}
 
 /* EDIT BOX */
 .edit-box{
