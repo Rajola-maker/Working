@@ -215,3 +215,29 @@ function goHome(){ window.location.href = "home.html"; }
 function goGames(){ window.location.href = "games.html"; }
 function goChats(){ window.location.href = "chat.html"; }
 function goTournaments(){ window.location.href = "tournaments.html"; }
+const imageUpload = document.getElementById("imageUpload");
+const profilePic = document.getElementById("profilePic");
+
+// Load saved image
+window.addEventListener("load", function () {
+    const savedImage = localStorage.getItem("profileImage");
+    if (savedImage) {
+        profilePic.src = savedImage;
+    }
+});
+
+// Upload new image
+imageUpload.addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            profilePic.src = e.target.result;
+            localStorage.setItem("profileImage", e.target.result);
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
