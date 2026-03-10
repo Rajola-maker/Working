@@ -241,3 +241,30 @@ imageUpload.addEventListener("change", function () {
         reader.readAsDataURL(file);
     }
 });
+// NAVIGATION
+const homeNav = document.getElementById("homeNav");
+const gamesNav = document.getElementById("gamesNav");
+const tournamentsNav = document.getElementById("tournamentsNav");
+const chatNav = document.getElementById("chatNav");
+const accountNav = document.getElementById("accountNav");
+
+// Go to pages
+homeNav.onclick = () => {
+  window.location.href = "home.html";
+};
+
+gamesNav.onclick = () => {
+  window.location.href = "games.html";
+};
+
+tournamentsNav.onclick = () => {
+  window.location.href = "tournaments.html";
+};
+
+chatNav.onclick = () => {
+  window.location.href = "chat.html";
+};
+
+accountNav.onclick = () => {
+  window.location.href = "account.html";
+};
