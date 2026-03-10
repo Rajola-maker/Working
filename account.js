@@ -250,7 +250,7 @@ const accountNav = document.getElementById("accountNav");
 
 // Go to pages
 homeNav.onclick = () => {
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 };
 
 gamesNav.onclick = () => {
